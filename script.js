@@ -92,8 +92,8 @@ function createBoard(level) {
       gameBoard.style.gridTemplateRows = 'repeat(3, 100px)';
       break;
     case 3:
-      gameBoard.style.gridTemplateColumns = 'repeat(6, 100px)';
-      gameBoard.style.gridTemplateRows = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateColumns = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateRows = 'repeat(6, 100px)';
       break;
   }
 
