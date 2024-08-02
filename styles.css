@@ -6,13 +6,13 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-    overflow: hidden; /* Evita el desplazamiento en dispositivos móviles */
+    overflow: hidden; /* Evitar el desplazamiento en el body */
 }
 
 #game-container {
     text-align: center;
-    max-width: 100%; /* Asegúrate de que no se desborde en pantallas pequeñas */
-    padding: 10px; /* Añade algo de espacio alrededor */
+    max-width: 100%;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px; /* Añadir espacio interno */
+    padding: 10px;
 }
 
 #game-board {
@@ -28,6 +28,9 @@ body {
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
+    overflow-x: auto; /* Habilitar desplazamiento horizontal */
+    white-space: nowrap; /* Asegura que los elementos no se rompan en varias líneas */
+    -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en iOS */
 }
 
 .hidden {
@@ -40,6 +43,7 @@ body {
     position: relative;
     cursor: pointer;
     perspective: 1000px;
+    display: inline-block; /* Asegura que las cartas se alineen horizontalmente */
 }
 
 .card-inner {
