@@ -84,8 +84,8 @@ function createBoard(level) {
   // Set grid template based on level
   switch (level) {
     case 1:
-      gameBoard.style.gridTemplateColumns = 'repeat(2, 100px)';
-      gameBoard.style.gridTemplateRows = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateColumns = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateRows = 'repeat(2, 100px)';
       break;
     case 2:
       gameBoard.style.gridTemplateColumns = 'repeat(4, 100px)';
