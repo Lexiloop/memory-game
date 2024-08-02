@@ -75,19 +75,19 @@ function createBoard(level) {
   const images = cardData[level];
   const shuffledImages = [...images, ...images].sort(() => 0.5 - Math.random());
 
-  // Set grid template based on level
+  // Ajustar el grid-template basado en el nivel
   switch (level) {
     case 1:
-      gameBoard.style.gridTemplateColumns = 'repeat(2, 100px)';
-      gameBoard.style.gridTemplateRows = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateColumns = 'repeat(2, 1fr)'; // Adaptar al tamaño de la ventana
+      gameBoard.style.gridTemplateRows = 'repeat(4, 1fr)';
       break;
     case 2:
-      gameBoard.style.gridTemplateColumns = 'repeat(4, 100px)';
-      gameBoard.style.gridTemplateRows = 'repeat(3, 100px)';
+      gameBoard.style.gridTemplateColumns = 'repeat(3, 1fr)'; // 3 columnas para pantallas pequeñas
+      gameBoard.style.gridTemplateRows = 'repeat(4, 1fr)';
       break;
     case 3:
-      gameBoard.style.gridTemplateColumns = 'repeat(6, 100px)';
-      gameBoard.style.gridTemplateRows = 'repeat(4, 100px)';
+      gameBoard.style.gridTemplateColumns = 'repeat(4, 1fr)'; // 4 columnas para pantallas pequeñas
+      gameBoard.style.gridTemplateRows = 'repeat(6, 1fr)';
       break;
   }
 
@@ -100,7 +100,7 @@ function createBoard(level) {
         <div class="card-back"></div>
       </div>
     `;
-    addTouchAndClickListener(card, flipCard);
+    card.addEventListener('click', flipCard);
     gameBoard.appendChild(card);
   });
 }
