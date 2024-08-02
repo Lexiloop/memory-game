@@ -67,7 +67,7 @@ function startGame() {
       totalPairs = 6;
       break;
     case 3:
-      opportunities = 8; // Nivel 3: 8 oportunidades
+      opportunities = 12; // Nivel 3: 8 oportunidades
       totalPairs = 12;
       break;
   }
