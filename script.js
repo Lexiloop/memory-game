@@ -45,31 +45,38 @@ addTouchAndClickListener(playAgainButton, () => {
 addTouchAndClickListener(tryAgainButton, resetGame);
 
 function startGame() {
+  // Limpiar tablero y restablecer variables
+  gameBoard.innerHTML = ''; // Eliminar cartas anteriores
+  pairsFound = 0;
+  score = 0;
+  opportunities = 0;
+
   menu.classList.add('hidden');
   gameBoard.classList.remove('hidden');
   scoreBoard.classList.remove('hidden');
   endMessage.classList.add('hidden');
   loseMessage.classList.add('hidden');
-  score = 0;
-  pairsFound = 0;
+
   switch (parseInt(levelSelect.value)) {
     case 1:
-      opportunities = 4; // Nivel 1: 4 opportunities
+      opportunities = 4; // Nivel 1: 4 oportunidades
       totalPairs = 4;
       break;
     case 2:
-      opportunities = 6; // Nivel 2: 6 opportunities
+      opportunities = 6; // Nivel 2: 6 oportunidades
       totalPairs = 6;
       break;
     case 3:
-      opportunities = 8; // Nivel 3: 8 opportunities
+      opportunities = 8; // Nivel 3: 8 oportunidades
       totalPairs = 12;
       break;
   }
+
   opportunitiesDisplay.textContent = opportunities;
   scoreDisplay.textContent = score;
   createBoard(parseInt(levelSelect.value));
 }
+
 
 function createBoard(level) {
   const images = cardData[level];
