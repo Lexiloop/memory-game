@@ -11,8 +11,8 @@ body {
 
 #game-container {
     text-align: center;
-    max-width: 100%;
-    padding: 10px;
+    max-width: 100%; /* Asegúrate de que no se desborde en pantallas pequeñas */
+    padding: 10px; /* Añade algo de espacio alrededor */
     box-sizing: border-box;
 }
 
@@ -20,12 +20,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 10px; /* Añadir espacio interno */
 }
 
 #game-board {
     display: grid;
-    gap: 5px; /* Reducir el espacio entre las cartas */
+    gap: 10px;
     justify-content: center;
     margin-top: 20px;
 }
@@ -35,10 +35,8 @@ body {
 }
 
 .card {
-    width: 20vw; /* Ajustar el tamaño de las cartas como un porcentaje del ancho de la ventana */
-    height: 20vw;
-    max-width: 100px; /* Asegurar un tamaño máximo en pantallas grandes */
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     position: relative;
     cursor: pointer;
     perspective: 1000px;
@@ -113,14 +111,12 @@ button:hover {
     }
 
     .card {
-        width: 22vw; /* Ajustar el tamaño de las cartas para pantallas pequeñas */
-        height: 22vw;
-        max-width: 80px; /* Tamaño máximo en pantallas pequeñas */
-        max-height: 80px;
+        width: 70px; /* Ajustar tamaño de las cartas para pantallas pequeñas */
+        height: 70px;
     }
 
     #game-board {
-        gap: 5px;
+        gap: 5px; /* Reducir el espacio entre las cartas */
     }
 
     button {
