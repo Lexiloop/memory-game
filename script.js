@@ -77,7 +77,6 @@ function startGame() {
   createBoard(parseInt(levelSelect.value));
 }
 
-
 function createBoard(level) {
   const images = cardData[level];
   const shuffledImages = [...images, ...images].sort(() => 0.5 - Math.random());
