@@ -107,24 +107,44 @@ button:hover {
 }
 
 /* Media queries para mejor compatibilidad con dispositivos móviles */
-@media (max-width: 600px) {
-    #game-container {
-        width: 100%;
-        padding: 5px;
-    }
+@media (max-width: 600px) and (orientation: portrait) {
+  #game-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 5px;
+  }
 
+  #board-container {
+    max-height: 100vh;
+  }
+
+  #game-board.level-1 {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  #game-board.level-2 {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  #game-board.level-3 {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(8, 100px);
     .card {
-        width: 70px; /* Ajustar tamaño de las cartas para pantallas pequeñas */
-        height: 70px;
-    }
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+   }
 
-    #game-board {
-        gap: 5px; /* Reducir el espacio entre las cartas */
-    }
+  .card {
+    width: 70px;
+    height: 70px;
+  }
 
-    button {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
 }
